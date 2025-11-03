@@ -1,0 +1,9 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    url: jdbc:mariadb://localhost:3306/problem_solver?rewriteBatchedStatements=true
+    username: problem_solver_user
+    password: 1234
+    driver-class-name: org.mariadb.jdbc.Driver

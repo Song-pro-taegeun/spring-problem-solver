@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: spring-problem-solver
+  jpa:
+    open-in-view: false # 불필요한 세션 열림 방지
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
+        jdbc:
+          batch_size: 1000 # flush 시 한 번에 묶어서 insert할 개수
+        order_inserts: true # 같은 테이블 insert를 모아서 최적화
+        order_updates: true # 같은 테이블 update를 모아서 최적화
+
+jwt:
+  secret: qY3pU_2b0oJ-FvL9wN1xG8hZ_rQc4iE_sD5mA6tX7yP_kUj_asdR_DS0D_aSD6A_vnjkC54hfjkio_sdjkl324asjfi-sdas10053_DSOTI84B3BN2Z1ZDS
+  access-token-validity-in-seconds: 10800 # 3시간 (단위: 초)
+  refresh-token-validity-in-seconds: 604800 # 7일 (단위: 초)
